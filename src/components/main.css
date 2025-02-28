@@ -1,0 +1,41 @@
+.main__content {
+  display: flex;
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+
+}
+
+
+.main__text {
+  text-align: left; /* Centra el texto dentro del contenedor */
+  margin-top: 60px;
+  width: 800px;
+ padding: 20px;
+ margin-left: 50px;
+ opacity: 0; /* Inicialmente invisible */
+ transition: opacity 0.8s ease-in-out; /* Transición suave de opacidad */
+}
+
+.main__text.visible {
+  opacity: 1; /* Se vuelve visible */
+}
+
+.main__text h1 {
+
+  font-size: 4rem;
+  color: white;
+  margin: 0; /* Elimina el margen por defecto que podría afectar la alineación */
+}
+
+.main__text p {
+  font-size: 1.2rem;
+  margin: 30px auto;
+  color: #A9A7A7
+
+}
+
+.main__text span{
+  color: #78B321;
+}
+
+
