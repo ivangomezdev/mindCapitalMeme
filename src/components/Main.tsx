@@ -1,5 +1,4 @@
 import SolanaButton from "./BuyButton";
-import Contract from "./Contract";
 
 import "./main.css";
 
