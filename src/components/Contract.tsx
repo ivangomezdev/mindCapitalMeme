@@ -34,10 +34,12 @@ const Contract = () => {
       <h4>MindCapital Address</h4>
      
       <div className='contract__number' ref={divRef}>
-      <img className='contract__coin' src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740692093/Logo_Tienda_Ecol%C3%B3gica_Minimalista_Beige-removebg-preview_nykxiq.png" alt="" />
+        <div className='contract__coin'>
+      <img  src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740768075/49378cc9-abb8-4efa-95cb-528ae1bb41ea-removebg-preview_ml5zx2.png" alt="" />
+      </div>
       <p>Próximamente...</p> 
       </div>
-      
+      <p>hasdhasdhashdashdhasdhasdhashdashd</p>
     </div>
   )
 }

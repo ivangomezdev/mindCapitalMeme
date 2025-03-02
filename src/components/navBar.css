@@ -1,182 +1,35 @@
-/* Estilos base del navbar */
-.navbar {
-    position: relative;
+.navBar__content{
+  display: flex;
+  gap: 38%;
+  align-items: center;
+}
+
+.navBar__logo{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.navBar__logo h5{
  
-    width: 100%;
-    padding: 15px 20px;
-     background: transparent;
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    z-index: 1000;
-
-  }
-
-  .navbar-container img{
-    width: 190px;
-   
-  }
-  
-  /* Estilos cuando se hace scroll */
-  .navbar.scrolled {
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Contenedor del navbar */
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin-left: 30px;
-  }
-
-  
-  
-  /* Logo */
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar.scrolled .logo {
-    color: black;
-  }
-  
-  /* Menú desktop */
-  .menu-desktop {
-    display: flex;
-    gap: 40px;
-    margin-left: 40px;
-  }
-  
-  .menu-desktop a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: white;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar.scrolled .menu-desktop a {
-    color: black;
-  }
-  
-  /* Botón menú hamburguesa */
-  .menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none;
-  }
-  
-  /* Menú móvil */
-  .menu-mobile {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-  }
-  
-  .menu-mobile a {
-    text-decoration: none;
-    padding: 10px 0;
-    color: black;
-    display: block;
-  }
-  
-  /* Responsive: Mostrar menú hamburguesa en móviles */
-  @media (max-width: 768px) {
-    .menu-desktop {
-      display: none;
-    }
-    
-    .menu-toggle {
-      display: block;
-    }
-  
-    .menu-mobile {
-      display: flex;
-    }
-  }
-
-  @media (max-width: 900px) {
-    .menu-button {
-    display: none;
-    }
-  }
-
-  @media (max-width: 1407px) {
-    .menu-button {
-      margin-right: -100px !important;
-    }
-  }
-
-  @media (max-width: 1357px) {
-    .menu-button {
-      margin-right: -50px !important;
-    }
-  }
+margin-left: -10px;
+color: white;
+}
 
 
-  @media (max-width: 1307px) {
-    .menu-button {
-      margin-right: -20px !important;
-    }
-  }
+.navBar__logo img{
+  width: 100px;
+  margin-top: -10px;
+}
 
-  @media (max-width: 1227px) {
-    .menu-button {
-      margin-right: 0px !important;
-    }
-  }
-  
-
-  .menu-button {
-    border-radius: 30px;
-    background-color: rgba(250, 235, 215, 0); /* Fondo inicial transparente */
-    transition: background-color 1s ease; /* Transición suave para el color de fondo */
-    color: aliceblue;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    border: solid 2px rgba(0, 0, 255, 0.581);
-    padding: 13px;
-    font-size: 17px;
-    cursor: pointer;
-    background-size: 200% 100%; /* Aseguramos que el fondo cubra más espacio inicialmente */
-    background-position: right center; /* Comienza desde la derecha */
-    margin-right: -150px;
-  }
-  
-  .menu-button:hover {
-    background-color: black; /* Fondo de color negro al hacer hover */
-    color: #005392;
-  }
-  
-
-  .navbar__underline-hover {
-    position: relative; /* Necesario para posicionar el ::after */
-    cursor: pointer; /* Opcional: indica que es interactivo */
-  }
-  
-  .navbar__underline-hover::after {
-    content: ''; /* Elemento vacío para el subrayado */
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Ajusta la distancia del subrayado respecto al texto */
-    width: 100%; /* Cubre todo el ancho del texto */
-    height: 2px; /* Grosor del subrayado */
-    background-color: #fff; /* Color del subrayado (ajusta según necesites) */
-    transform: scaleX(0); /* Empieza con ancho 0 */
-    transform-origin: left; /* El crecimiento empieza desde la izquierda */
-    transition: transform 0.3s ease-in-out; /* Animación suave */
-  }
-  
-  .navbar__underline-hover:hover::after {
-    transform: scaleX(1); /* Se expande al 100% del ancho */
-  }
+.navBar__socialChips{
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 5px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 30px;
+  height: 30px;
+}

@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-Regular.woff2') format('woff2');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -21,7 +21,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -49,12 +49,100 @@ a {
   }
 }
 
-
-.home__main{
-  background-image: url("https://res.cloudinary.com/dc5zbh38m/image/upload/v1740675506/mainBg_cjmx0i.jpg");
-  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  min-height: 130vh; /* Asegura que el fondo ocupe toda la altura de la pantalla */
-  margin-bottom: 300px; /* Elimina márgenes para evitar espacios no deseados */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
+.home__main {
+  width: 100vw; /* Asegura que el fondo cubra el ancho completo */
+  min-height: 100vh;
+  overflow-x: hidden; /* Evita scroll horizontal */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='none' stroke='rgba(255, 255, 255, 0.15)' stroke-width='1' d='M 0 20 L 40 20 M 20 0 L 20 40'/%3E%3C/svg%3E"),
+    linear-gradient(
+      135deg,
+      #4caf50 0%,
+      #008080 25%,
+      #0074d9 50%,
+      #ff1493 75%,
+      #8a2be2 100%
+    );
+  background-size: 40px 40px, 200% 200%;
+  animation: moveGradient 30s ease-in-out infinite;
+  
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  width: 100%;
+}
+
+.imgBanner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .home__main {
+    padding: 1rem;
+  }
+}
+
+.home__img {
+  position: absolute;
+  bottom: -9.2%; 
+  right: 1%;  
+  transform: translate(-5%, -10%); 
+}
+
+.home__img img {
+  max-width: 100%; /* Asegura que la imagen no desborde */
+  height: auto; /* Mantiene la proporción */
+}
+
+
+
+@media (max-width: 1300px) {
+  .home__img {
+    max-width: 90%;
+   
+
+    transform: translate(-2%, -5%);
+  }
+
+  .home__img img {
+     position: relative;
+     left: 70px;
+    max-width: 90%; /* Reduce el tamaño en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 1200px) {
+  .home__img {
+  display: none;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .home__img {
+    bottom: 5%; /* Ajusta la posición en mobile */
+    right: 2%;
+    transform: translate(-2%, -5%);
+  }
+
+  .home__img img {
+    max-width: 50%; /* Reduce el tamaño en pantallas pequeñas */
+  }
+}
+

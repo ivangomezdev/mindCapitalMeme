@@ -1,34 +1,41 @@
-"use client"
-import React, { useEffect, useState } from "react";
-import "./main.css";
+import SolanaButton from "./BuyButton";
 import Contract from "./Contract";
 
+import "./main.css";
 
 const Main = () => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      // Al montar el componente, activamos la animación
-      setIsVisible(true);
-    }, []);
   return (
-    <div className="main__content">
-      <div className={`main__text ${isVisible ? 'visible' : ''}`}>
-        <h1>
-          {" "}
-          <span>Mind Capital</span> una nueva memecoin impulsada por la
-          comunidad
+    <div className="hero-container">
+      <div className="text-container">
+        <h1 className="hero-text">
+          <div className="text-line line-1">LA MEMECOIN</div>
+          <div className="text-line line-2">
+            <div className="solanaButton">
+            <SolanaButton />
+            </div>
+            <span>DE LA COMUNIDAD</span>
+          </div>
+          <div className="text-line line-3">MINDCAPITAL</div>
         </h1>
-        <p>
-          Abrace el futuro: no más promesas incumplidas, solo energía pura de
-          Memecoin Los poseedores de Mind Capital se han quedado atrapados en la
-          incertidumbre. Es hora de un nuevo comienzo: <span style={{color:"#00A5AD"}}> una memecoin impulsada
-          por la comunidad con un potencial infinito.</span>
-        </p>
-        
-     <Contract/> 
+        <div className="description-container">
+          <img
+            src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740774488/7a4eb05d-7a2f-4810-a1df-de62cc403cc3-removebg-preview_1_q7velz.png"
+            alt=""
+          />
+          <div className="description-containerText">
+            <p>
+              Somos la comunidad afectada por el esquema Ponzi de MindCapital.
+              Creamos esta memecoin para recuperar lo que nos prometieron.
+              <span style={{ fontWeight: "bold", color: "#00A5AD" }}>
+                {" "}
+                El 70% de las ganancias irá a financiar una demanda contra ellos{" "}
+              </span>
+              , y el 30% se reinvertirá en la publicidad del proyecto. ¡La
+              venganza es descentralizada! 🚀
+            </p>
+          </div>
+        </div>
       </div>
-      
     </div>
   );
 };

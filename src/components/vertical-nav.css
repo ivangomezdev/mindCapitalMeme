@@ -1,0 +1,49 @@
+.vertical-nav {
+    position: fixed;
+    right: 32px;
+    top: 20%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 9999; /* Aumentamos el z-index para asegurar que esté por encima */
+  }
+  
+  .nav-item {
+    background: none;
+    border: solid 1px gray;
+    border-radius: 5px;
+    background-color: #ffeb6ae0;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    text-align: right;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .nav-item:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .nav-item.active {
+    color: #01A5AC;
+  }
+  
+  .arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .arrow.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
