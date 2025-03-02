@@ -98,6 +98,10 @@
 
 
 @media (max-width: 920px) {
+  .text-container{
+    margin-left: 30px;
+    
+  }
   .description-container {
    margin-left: -50px !important; 
   }
@@ -129,8 +133,8 @@
   .description-container {
     flex-direction: row; 
     gap: 15px; 
-    padding: 10px;
-    margin-left: -10px !important;
+    padding: 15px;
+    margin-left: -25px !important;
     margin-top: 50px;
   }
 
@@ -138,6 +142,7 @@
     width: clamp(80px, 15vw, 120px); 
     left: clamp(5px, 2vw, 20px); 
     top: clamp(60px, 2vh, 30px);
+    filter: none;
   }
 
   .description-containerText {
@@ -146,60 +151,107 @@
   }
 }
 
-@media (max-width: 480px) {
-  .hero-text {
-    font-size: clamp(1.5rem, 4vw, 3rem); 
-  }
 
-  .line-1{
-margin-left: 50px;
-  }
-
-  .solanaButton{
+@media (max-width: 598px) {
+  .solanaButton {
     display: none;
   }
 
+  .text-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 0;
+    left: 0;
+  }
 
   .line-2 {
-    flex-direction: column; 
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente en columna */
     gap: 5px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra el bloque completo */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 1rem;
+  }
+
+  .text-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 0;
+    left: 0;
+  }
+
+  .hero-text {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-left: 0 !important;
+  }
+
+  .solanaButton {
+    display: none;
+  }
+
+  .line-2 {
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente en columna */
+    gap: 5px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra el bloque completo */
+  }
+
+  .line-2 span {
+    white-space: nowrap;
+    text-align: center; /* Refuerza el centrado del texto */
   }
 
   .line-3 {
-    margin-left: clamp(10px, 5vw, 50px); 
+    margin-left: 0; /* Centrado completo */
   }
 
   .description-container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     margin-top: -1px;
+    margin: 0 auto !important;
   }
 
   .description-container img {
     width: clamp(80px, 25vw, 100px);
-  top: 36px;
-  left: -10px;
-  filter:none;
+    top: 36px;
+    left: -10px;
+    filter: none;
+    background-color: rebeccapurple;
+    padding: 5px;
   }
 
   .description-containerText {
-    min-width: 100%; 
-    
+    min-width: 110%;
+    color: black !important;
   }
 }
 
-@media (max-width: 370px) {
 
-.hero-text{
-  margin-left: -30px !important;
-}
-}
-
-@media (max-width: 330px) {
-
-  .hero-text{
-    margin-left: -40px !important;
+@media(max-width:387px){
+  .hero-text {
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    margin-left: 0 !important;
   }
+}
+
+
+@media(max-width:366px){
+  .hero-text {
+    font-size: clamp(1.55rem, 4vw, 3rem);
+    margin-left: 0 !important;
   }
+}

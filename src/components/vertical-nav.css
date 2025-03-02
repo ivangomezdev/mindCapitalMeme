@@ -1,7 +1,7 @@
 .vertical-nav {
     position: fixed;
     right: 32px;
-    top: 20%;
+    top: 15%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     background: none;
     border: solid 1px gray;
     border-radius: 5px;
-    background-color: #ffeb6ae0;
+    background-color: #ffeb6a35;
     color: rgb(0, 0, 0);
     font-size: 14px;
     cursor: pointer;
@@ -33,7 +33,9 @@
   }
   
   .nav-item.active {
-    color: #01A5AC;
+    color: #ffffff;
+    text-shadow: 1px 0px 1px #000000;
+    background-color: #FFEB6A;
   }
   
   .arrow {
