@@ -30,15 +30,15 @@ export default function Home() {
       </section>
       <div className="imgBanner">
         <Image
-          width={500}
-          height={340}
+          width={450}
+          height={300}
           priority
           src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740959652/aaaa1-removebg-preview_dddvvu.png"
           alt=""
         />
         <hr className="verticalLine" />
         <Image
-          width={500}
+          width={400}
           height={300}
           priority
           src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740960413/aaaaa32_ixwdb2.png"
