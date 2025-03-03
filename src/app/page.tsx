@@ -8,19 +8,21 @@ export default function Home() {
     <div>
       <VerticalNav />
       <section id="about" className="home__main">
+        <div className="background-layer"></div>
         <Navbar />
         <Main />
         <div className="home__img">
           <img
-            src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740775153/los_n%C3%BAmeros_no_mienten__nosotros_s%C3%AD.__1_-removebg-preview_arzvqb.png"
+            src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740901067/los_n%C3%BAmeros_no_mienten__nosotros_s%C3%AD.__2_-removebg-preview_ptpnbo.png"
             alt=""
           />
         </div>
       </section>
-      <img
-        className="imgBanner"
-        src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740771798/BUY_MCAPITAL_ny4c3z.png"
-      />
+      <div  className="imgBanner">
+      <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740959652/aaaa1-removebg-preview_dddvvu.png" alt="" />
+      <hr className="verticalLine" />
+      <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740960413/aaaaa32_ixwdb2.png" alt="" />
+      </div>
       <section id="where-to-buy">
         <h2>Where To Buy Section</h2>
       </section>
