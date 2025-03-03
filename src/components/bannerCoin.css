@@ -1,0 +1,37 @@
+.bannerCoin__container {
+    width: 100vw;
+    height: 80px; /* El alto que querías para el banner */
+    overflow: hidden;
+    position: relative;
+    background-color: #FFEB6A;
+  }
+  
+  .bannerCoin__Content {
+    display: flex;
+    animation: marquee 15s linear infinite; /* 15s es la duración, ajústalo según prefieras */
+    white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
+    
+  }
+  
+  .bannerCoin__Item {
+    margin-right: 40px; /* Espacio entre elementos, ajústalo según necesites */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Evita que los elementos se compriman */
+    
+  }
+  
+  /* Animación de desplazamiento */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Se mueve la mitad porque duplicamos los elementos */
+    }
+  }
+  
+  /* Opcional: Pausar al hacer hover */
+  .bannerCoin__Container:hover .marqueeContent {
+    animation-play-state: paused;
+  }

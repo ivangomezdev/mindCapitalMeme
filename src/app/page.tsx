@@ -5,6 +5,7 @@ import { VerticalNav } from "@/components/verticalNav";
 import Roadmap from "@/components/RoadMap";
 import WhyBuy from "@/components/WhyBuy";
 import Image from "next/image";
+import BannerCoin from "@/components/BannerCoin";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
           />
         </div>
       </section>
-
+      <BannerCoin />
       <section id="whyBuy" className="whyBuy__section">
         <WhyBuy />
       </section>
