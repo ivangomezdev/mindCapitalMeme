@@ -1,3 +1,37 @@
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-line {
+  opacity: 0; /* Inicialmente invisible */
+}
+
+/* Solo aplica la animación cuando tiene la clase is-visible */
+.text-line.is-visible {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.line-1.is-visible {
+  animation-delay: 0s;
+}
+
+.line-2.is-visible {
+  animation-delay: 0.8s;
+}
+
+.line-3.is-visible {
+  animation-delay: 1.6s;
+}
+/* FIN ANIMACIONES */
+
 .hero-container {
   position: relative;
   padding: 2rem;

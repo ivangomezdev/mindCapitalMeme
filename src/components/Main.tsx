@@ -1,17 +1,52 @@
+"use client"
 import Image from "next/image";
 import SolanaButton from "./BuyButton";
+import { useEffect, useRef } from "react";
 
 import "./main.css";
 
 const Main = () => {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Cuando el elemento es visible, añadimos la clase 'is-visible'
+            entry.target.querySelectorAll('.text-line').forEach((el) => {
+              el.classList.add('is-visible');
+            });
+            // Opcional: dejar de observar después de la primera vez
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Se activa cuando el 10% del elemento es visible
+      }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    // Cleanup del observer
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="hero-container">
+    <div className="hero-container" ref={heroRef}>
       <div className="text-container">
         <h1 className="hero-text">
           <div className="text-line line-1">LA MEMECOIN</div>
           <div className="text-line line-2">
             <div className="solanaButton">
-            <SolanaButton />
+              <SolanaButton />
             </div>
             <span>DE LA COMUNIDAD</span>
           </div>

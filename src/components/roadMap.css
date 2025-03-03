@@ -3,6 +3,42 @@
   src: url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 }
 
+/*ANIMACIONES */
+
+.phase-container {
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.phase-container.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Opcional: Animación para el título */
+.roadmap-title {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.phase-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+
+
 .roadmap-container {
   max-width: 1000px;
   margin: 0 auto;
