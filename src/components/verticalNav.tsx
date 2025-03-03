@@ -10,8 +10,8 @@ interface Section {
 const sections: Section[] = [
   { id: "about", label: "Home" },
   { id: "whyBuy", label: "Acerca de" },
-  { id: "disclaimer", label: "Comunidad" },
-  { id: "roadmap", label: "Contrato" }
+  { id: "roadmap", label: "Contrato" },
+  { id: "disclaimer", label: "Comunidad" }
 ]
 
 export function VerticalNav() {

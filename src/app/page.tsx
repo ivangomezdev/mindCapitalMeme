@@ -40,7 +40,7 @@ export default function Home() {
 
 
       <section id="token">
-        <h2>Token Section</h2>
+        <h2></h2>
       </section>
     </div>
   )
