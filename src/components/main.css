@@ -260,6 +260,9 @@
   .hero-text {
     font-size: clamp(1.55rem, 4vw, 3rem);
     margin-left: 0 !important;
+
   }
+
 }
+
 
