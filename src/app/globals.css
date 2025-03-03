@@ -24,13 +24,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 * {
   box-sizing: border-box;
@@ -193,3 +186,34 @@ section {
   }
 }
 
+.whyBuy__section{
+
+  background: 
+    linear-gradient(
+      135deg,
+      #2d2d2d 0%,
+      #000000 25%,
+      #101010 50%,
+      #1d1d1d 80%,
+      #282828 90%,
+      #282828 100%
+    );
+
+  animation: moveGradient 60s ease-in-out infinite;
+}
+
+.roadMap__section{
+  
+  background: 
+    linear-gradient(
+      135deg,
+      #2d2d2d 0%,
+      #000000 25%,
+      #101010 50%,
+      #1d1d1d 80%,
+      #282828 90%,
+      #282828 100%
+    );
+
+  animation: moveGradient 60s ease-in-out infinite;
+}

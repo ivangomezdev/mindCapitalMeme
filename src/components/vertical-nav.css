@@ -33,7 +33,7 @@
   }
   
   .nav-item.active {
-    color: #ffffff;
+    color: #ffffff00;
     text-shadow: 1px 0px 1px #000000;
     background-color: #FFEB6A;
   }

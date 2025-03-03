@@ -2,6 +2,8 @@ import Main from "@/components/Main"
 import Navbar from "@/components/NavBar"
 import "./globals.css"
 import { VerticalNav } from "@/components/verticalNav"
+import Roadmap from "@/components/RoadMap"
+import WhyBuy from "@/components/WhyBuy"
 
 export default function Home() {
   return (
@@ -18,22 +20,24 @@ export default function Home() {
           />
         </div>
       </section>
+
+      <section id="whyBuy" className="whyBuy__section" >
+       <WhyBuy/>
+      </section>
       <div  className="imgBanner">
       <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740959652/aaaa1-removebg-preview_dddvvu.png" alt="" />
       <hr className="verticalLine" />
       <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740960413/aaaaa32_ixwdb2.png" alt="" />
       </div>
-      <section id="where-to-buy">
-        <h2>Where To Buy Section</h2>
+      <section className="roadMap__section" id="roadmap">
+        <Roadmap/>
       </section>
 
       <section id="disclaimer">
-        <h2>Disclaimer Section</h2>
+     
       </section>
 
-      <section id="roadmap">
-        <h2>Roadmap Section</h2>
-      </section>
+
 
       <section id="token">
         <h2>Token Section</h2>
