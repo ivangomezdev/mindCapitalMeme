@@ -42,7 +42,7 @@ export default function Roadmap() {
             <li>Primer Retiro para la Demanda: Publicar las primeras transferencias de fondos al equipo legal con total transparencia.</li>
             <li>DAO de la Comunidad: Implementar una DAO donde los holders voten sobre los siguientes pasos legales y estratégicos.</li>
             <li>OAlianzas Estratégicas: Conectar con otros proyectos cripto y comunidades afectadas para ganar más tracción.</li>
-            <li>Campaña "La Venganza es Descentralizada": Potenciar el marketing con influencers y medios para exponer el caso y atraer más apoyo.</li>
+            <li>Campaña La Venganza es Descentralizada: Potenciar el marketing con influencers y medios para exponer el caso y atraer más apoyo.</li>
           </ul>
         </div>
         <div className="phase-line last-line"></div>
