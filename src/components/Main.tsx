@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SolanaButton from "./BuyButton";
 
 import "./main.css";
@@ -17,9 +18,11 @@ const Main = () => {
           <div className="text-line line-3">MINDCAPITAL</div>
         </h1>
         <div className="description-container">
-          <img
+          <Image
             src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740774488/7a4eb05d-7a2f-4810-a1df-de62cc403cc3-removebg-preview_1_q7velz.png"
             alt=""
+            width={500}
+            height={300}
           />
           <div className="description-containerText">
             <p>

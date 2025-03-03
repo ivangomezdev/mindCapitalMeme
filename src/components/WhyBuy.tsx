@@ -1,11 +1,15 @@
 import React from "react";
 import "./whyBuy.css"
+import Image from "next/image";
 const WhyBuy = () => {
   return (
     <div  className="whyBuy__content">
       <h1 className="whyBuy__title">POR QUÉ INVERTIR</h1>
       <div className="whyBuy__textContent">
-        <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741025326/coin-removebg-preview_oirzku.png" alt="" />
+        <Image
+        width={500}
+        height={300}
+         src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741025326/coin-removebg-preview_oirzku.png" alt="" />
         <ul>
           <li>
             <strong>Justicia descentralizada:</strong> Contribuye a financiar

@@ -32,7 +32,7 @@ export default function SolanaButton() {
               transition: "transform 0.3s ease-out"
             }}
           >
-            <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740763069/solanacoin-removebg-preview_dksmpf.png" alt="Solana Coin" width={24} height={24} />
+        
           </div>
         ))}
     </div>

@@ -35,7 +35,7 @@ const Contract = () => {
      
       <div className='contract__number' ref={divRef}>
         <div className='contract__coin'>
-      <img  src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740768075/49378cc9-abb8-4efa-95cb-528ae1bb41ea-removebg-preview_ml5zx2.png" alt="" />
+      
       </div>
       <p>Próximamente...</p> 
       </div>
