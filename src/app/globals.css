@@ -149,7 +149,8 @@ section {
   }
 
   .home__img img {
-    max-width: 50%;
+    max-width: 40%;
+
   }
 }
 
@@ -176,6 +177,16 @@ section {
   .imgBanner hr{
     display: none;
   }
+}
+
+
+@media(max-width:610px){
+  .imgBanner img{
+   width:45%;
+   height: 200px;
+  }
+
+
 }
 
 @media(max-width:500px){
