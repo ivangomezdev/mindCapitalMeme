@@ -39,7 +39,11 @@
 
 .whyBuy__textContent img{
    max-width: 350px;
-    
+   box-shadow: 10px 10px 5px 0px rgba(255,153,51,0.39);
+   -webkit-box-shadow: 10px 10px 5px 0px rgba(255,153,51,0.39);
+   -moz-box-shadow: 10px 10px 5px 0px rgba(255,153,51,0.39);
+    border-radius: 50%;
+    background-position: 300px;
 
 }
 

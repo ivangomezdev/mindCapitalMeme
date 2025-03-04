@@ -6,6 +6,7 @@ import Roadmap from "@/components/RoadMap";
 import WhyBuy from "@/components/WhyBuy";
 import Image from "next/image";
 import BannerCoin from "@/components/BannerCoin";
+import Community from "@/components/Community";
 
 export default function Home() {
   return (
@@ -50,7 +51,9 @@ export default function Home() {
         <Roadmap />
       </section>
 
-      <section id="disclaimer"></section>
+      <section id="disclaimer">
+      <Community/>  
+      </section>
 
       <section id="token">
         <h2></h2>

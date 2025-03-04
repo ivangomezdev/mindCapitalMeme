@@ -7,7 +7,7 @@ const WhyBuy = () => {
       <h1 className="whyBuy__title">POR QUÉ INVERTIR</h1>
       <div className="whyBuy__textContent">
         <Image
-        width={500}
+        width={400}
         height={300}
          src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741025326/coin-removebg-preview_oirzku.png" alt="" />
         <ul>
