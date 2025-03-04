@@ -16,7 +16,7 @@
 
 }
 .whyBuy__title {
-    
+    margin-top: 60px;
     color: white;
     font-size: clamp(2rem, 5vw, 3rem); 
     font-weight: 800;

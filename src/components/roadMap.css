@@ -18,6 +18,7 @@
 
 /* Opcional: Animación para el título */
 .roadmap-title {
+  margin-top: 60px;
   opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
 }

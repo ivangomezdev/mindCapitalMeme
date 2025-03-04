@@ -1,82 +1,74 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 import "./community.css";
-export default function Community() {
+
+const Community = () => {
   return (
-    <main className="main-container">
-      <div className="container">
-        <div className="hero-section">
-          <Image
-            src={
-              "https://res.cloudinary.com/dc5zbh38m/image/upload/v1741048747/Dise%C3%B1o_sin_t%C3%ADtulo__11_-removebg-preview_v8plou.png"
-            }
-            alt=""
-            width={400}
-            height={400}
-          />
-
-          {/* Right side with text */}
-          <div className="hero-content">
-            <h1 className="title">TOKEN</h1>
-            <div className="description">
-              <p>
-               $MCapital no es solo otro token, esta construido sobre ERC20.
-              </p>
-              <p>Uno de los protocolos más rápidos en crecimiento que existen</p>
-              <p>
-                Olvida el Hype, Subete a la ola. Estamos presentes en
-              </p>
-              <p>Twitter y telegram, no olvides seguirnos!</p>
-            </div>
-
-            <div className="cta-buttons">
-              <button className="primary-button">COMPRA $MCapital</button>
-              <Link href="#" className="secondary-button">
-                Descubre Más
-                <ExternalLink size={18} />
-              </Link>
-            </div>
+    <div className="community">
+      <div className="community__container">
+        <div className="community__header">
+          <div className="community__logo-container">
+            <img
+              src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740768075/49378cc9-abb8-4efa-95cb-528ae1bb41ea-removebg-preview_ml5zx2.png"
+              alt="Grumpy Cat Logo"
+              className="community__logo"
+            />
+          </div>
+          <div className="community__tagline">
+            <h1 className="community__title">
+              NO HAY MONEDAS MALAS, SOLO ENTRADAS MAL HECHAS.
+            </h1>
+          </div>
+          <div className="community__cta">
+            <button className="community__buy-button">Buy $MCapital</button>
           </div>
         </div>
 
-        {/* Token supply info */}
-        <div className="token-info">
-          <div className="token-grid">
-            <div className="token-stat">
-              <div className="token-icon">
-                <Image
-                  src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741050656/dollarbill-removebg-preview_m0fykq.png"
-                  alt="Money stack"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div className="token-details">
-                <p className="stat-label">Total Supply</p>
-                <p className="stat-value">
-                  21,000,000,000 (21 Billones)
-                </p>
-              </div>
-            </div>
+        <div className="community__content">
+          <div className="community__disclaimer">
+            <h2 className="community__disclaimer-title">INFORMACIÓN</h2>
+            <p className="community__disclaimer-text">
+              MindCapital vendió la promesa de ganancias fáciles, pero terminó
+              siendo un esquema Ponzi que dejó a miles de personas sin su
+              dinero. Muchos confiaron en el sistema y nunca pudieron recuperar
+              lo que invirtieron.
+            </p>
+            <p className="community__disclaimer-text">
+            $MCapital no es solo una memecoin, es una revancha financiera. Una parte de las ganancias financiará la demanda contra MindCapital, mientras que el resto impulsará la visibilidad del proyecto.
+            </p>
+            <a href="#" className="community__learn-more">
+              Aprende más <span className="community__learn-more-icon">↗</span>
+            </a>
+            <p className="community__copyright">© 2025 MCapital.Site</p>
+          </div>
 
-            <div className="token-stat">
-              <div className="token-icon">
-                <Image
-                  src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741050661/images-removebg-preview_skmtju.png"
-                  alt="Money bag"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div className="token-details">
-                <p className="stat-label">Max Supply</p>
-                <p className="stat-value">1,000,000 (1 Millón)</p>
-              </div>
+          <div className="community__join">
+            <h2 className="community__join-title">Entra a la comunidad</h2>
+            <div className="community__social-buttons">
+              <button className="community__social-button community__social-button--telegram">
+                Telegram
+              </button>
+              <button className="community__social-button community__social-button--twitter">
+                Twitter
+              </button>
+            </div>
+            <div className="community__mascot">
+              <img
+                src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740768075/49378cc9-abb8-4efa-95cb-528ae1bb41ea-removebg-preview_ml5zx2.png"
+                alt="Grumpy Mascot"
+                className="community__mascot-image"
+              />
+              <span className="community__mascot-name">$MCapital</span>
+            </div>
+            <div className="community__navigation">
+              <button className="community__nav-button">Home</button>
+              <button className="community__nav-button">Acerca de</button>
+              <button className="community__nav-button">Roadmap</button>
+              <button className="community__nav-button">Contrato</button>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Community;
