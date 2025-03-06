@@ -1,35 +1,86 @@
-.navBar__content{
+.navBar__content {
   display: flex;
-  gap: 38%;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.267);
+  font-size: 1.3rem;
+  width: 450px;
+  padding: 5px;
+  height: 70px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  margin: 15px auto;
+  justify-content: center;
+  gap: 30px;
+  position: relative; 
 }
 
-.navBar__logo{
+.navBar__content p {
+  font-size: 1rem;
+}
+
+.navBar__logo {
   margin-top: 30px;
   display: flex;
   align-items: center;
   margin-left: 30px;
 }
 
-.navBar__logo h5{
- 
-margin-left: -10px;
-color: white;
+.navBar__logo h5 {
+  margin-left: -10px;
+  color: white;
 }
 
-
-.navBar__logo img{
+.navBar__logo img {
   width: 100px;
   margin-top: -10px;
 }
 
-.navBar__socialChips{
-  display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
-  gap: 5px;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.267);
+.navBar__lang {
   border-radius: 30px;
   height: 30px;
+  position: absolute;
+  left: 90vh;
+}
+
+
+
+@media (max-width:970px){
+  
+.navBar__lang {
+  border-radius: 30px;
+  height: 30px;
+  position: absolute;
+  left: 70vh;
+}
+}
+@media (max-width: 685px) {
+  .navBar__lang {
+    left: 90%; 
+  }
+}
+
+@media (max-width: 600px) {
+  .navBar__lang {
+    left: auto; 
+    right: 5px;
+    top: 5px; 
+  }
+}
+
+@media (max-width: 485px) {
+  .navBar__content {
+    max-width: 90%;
+  }
+
+  .navBar__content p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 409px) {
+  .navBar__content p {
+    display: none;
+  }
 }

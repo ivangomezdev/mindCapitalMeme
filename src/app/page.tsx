@@ -1,7 +1,6 @@
 import Main from "@/components/Main";
 import Navbar from "@/components/NavBar";
 import "./globals.css";
-import { VerticalNav } from "@/components/verticalNav";
 import Roadmap from "@/components/RoadMap";
 import WhyBuy from "@/components/WhyBuy";
 import Image from "next/image";
@@ -12,9 +11,8 @@ import Community from "@/components/Community";
 export default function Home() {
   return (
     <div>
-      <VerticalNav />
       <section id="about" className="home__main">
-        <div className="background-layer"></div>
+   
         <Navbar />
         <Main />
         <div className="home__img">
@@ -53,11 +51,11 @@ export default function Home() {
       </section>
 
       <section id="disclaimer">
-      <MindCoin/>  
+        <MindCoin />
       </section>
-   
+
       <section id="token">
-        <Community/>
+        <Community />
       </section>
     </div>
   );

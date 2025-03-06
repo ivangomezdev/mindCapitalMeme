@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import SolanaButton from "./BuyButton";
 import { useEffect, useRef } from "react";
@@ -13,17 +13,15 @@ const Main = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Cuando el elemento es visible, añadimos la clase 'is-visible'
-            entry.target.querySelectorAll('.text-line').forEach((el) => {
-              el.classList.add('is-visible');
+            entry.target.querySelectorAll(".text-line").forEach((el) => {
+              el.classList.add("is-visible");
             });
-            // Opcional: dejar de observar después de la primera vez
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.1, // Se activa cuando el 10% del elemento es visible
+        threshold: 0.1,
       }
     );
 
@@ -31,7 +29,6 @@ const Main = () => {
       observer.observe(heroRef.current);
     }
 
-    // Cleanup del observer
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
@@ -45,12 +42,30 @@ const Main = () => {
         <h1 className="hero-text">
           <div className="text-line line-1">LA MEMECOIN</div>
           <div className="text-line line-2">
-            <div className="solanaButton">
-              <SolanaButton />
-            </div>
             <span>DE LA COMUNIDAD</span>
+            <div className="mindCapImg">
+              <Image
+                src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741282808/MCP-removebg-preview_fjyst9.png"
+                alt=""
+                width={270}
+                height={250}
+              />
+            </div>
           </div>
-          <div className="text-line line-3">MINDCAPITAL</div>
+          <div className="text-line line-3">
+            MINDCAP
+            <span className="letter-i-container">
+              <span className="letter-i">I</span>
+              <Image
+                src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741296960/mindcolibriedit-removebg-preview_1_wyx6vb.png" // Cambia esta URL por tu imagen de punto
+                alt="dot for i"
+                width={55}
+                height={55}
+                className="dot-image"
+              />
+            </span>
+            TAL
+          </div>
         </h1>
         <div className="description-container">
           <Image
@@ -70,9 +85,12 @@ const Main = () => {
               , y el 30% se reinvertirá en la publicidad del proyecto. ¡La
               venganza es descentralizada! 🚀
             </p>
+            <SolanaButton />
           </div>
         </div>
+        
       </div>
+      
     </div>
   );
 };

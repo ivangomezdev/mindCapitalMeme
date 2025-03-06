@@ -1,23 +1,40 @@
 import "./navBar.css";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import XIcon from "@mui/icons-material/X";
-import Image from "next/image";
-
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
+import MapRoundedIcon from "@mui/icons-material/MapRounded";
+import RequestQuoteRoundedIcon from "@mui/icons-material/RequestQuoteRounded";
+import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
+import LangSwitch from "./LangSwitch";
 export default function Navbar() {
   return (
     <nav className="navBar__content">
-      <div className="navBar__logo">
-        <Image
-          src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740678602/logo_ggl1yp.svg"
-          alt=""
-          width={40}
-          height={40}
-        />
+      <div>
+        <HomeRoundedIcon />
+        <p>Home</p>
       </div>
 
-      <div className="navBar__socialChips">
-        <XIcon sx={{ color: "white", width: "20px" }} />
-        <TelegramIcon sx={{ color: "white", width: "20px" }} />
+      <div>
+        <InfoRoundedIcon />
+        <p>Info</p>
+      </div>
+
+      <div>
+        <MapRoundedIcon />
+        <p>RoadMap</p>
+      </div>
+
+      <div>
+        <RequestQuoteRoundedIcon />
+        <p>Token</p>
+      </div>
+
+      <div>
+        <PeopleRoundedIcon />
+        <p>Comunidad</p>
+      </div>
+
+      <div className="navBar__lang">
+        <LangSwitch/>
       </div>
     </nav>
   );

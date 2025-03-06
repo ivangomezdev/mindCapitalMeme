@@ -14,6 +14,11 @@
   opacity: 0; /* Inicialmente invisible */
 }
 
+.mindCapImg{
+  position: absolute;
+  left: 130%;
+}
+
 /* Solo aplica la animación cuando tiene la clase is-visible */
 .text-line.is-visible {
   animation: fadeIn 0.8s ease-out forwards;
@@ -45,16 +50,15 @@
 }
 
 
-
 .text-container {
   position: relative;
-  margin-left: clamp(20px, 10vw, 100px); 
+  margin-left: clamp(20px, 10vw, 100px);
   width: 100%;
   max-width: 800px;
 }
 
 .hero-text {
-  font-size: clamp(2rem, 5vw, 4rem); 
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 800;
   color: white;
   text-transform: uppercase;
@@ -70,7 +74,7 @@
 
 .line-1 {
   font-size: 1em;
-  margin-bottom: 0.2em;
+  margin-bottom: 60px;
 }
 
 .line-2 {
@@ -79,6 +83,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 60px;
+  margin-bottom: 60px;
 }
 
 .line-2 span {
@@ -87,8 +93,28 @@
 
 .line-3 {
   font-size: 1.4em;
-  margin-left: clamp(20px, 10vw, 125px); 
+  margin-left: clamp(20px, 10vw, 125px);
   color: #ffeb6a;
+  white-space: nowrap; /* Evita que la palabra se rompa */
+}
+
+.letter-i-container {
+  position: relative;
+  display: inline-block; /* Mantiene el flujo del texto */
+}
+
+.letter-i {
+  position: relative;
+  z-index: 1; /* La "I" debajo del punto */
+}
+
+.dot-image {
+  position: absolute;
+  top: -27px; /* Ajusta según necesites */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el punto */
+  z-index: 2; /* Punto encima de la "I" */
+  pointer-events: none; /* Evita interferencias */
 }
 
 .description-container {
@@ -104,24 +130,22 @@
 }
 
 .description-container img {
-  width: clamp(100px, 20vw, 180px); 
+  width: clamp(100px, 20vw, 180px);
   height: auto;
   border-radius: 30px;
   filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.9));
   flex-shrink: 0;
   position: relative;
-  left: clamp(10px, 5vw, 60px); 
-  top: clamp(20px, 5vh, 67px); 
+  left: clamp(10px, 5vw, 60px);
+  top: clamp(20px, 5vh, 67px);
   z-index: 2;
   top: 65px;
-  
 }
 
 .description-containerText {
   flex: 1;
   max-width: 600px;
-  min-width: clamp(200px, 50vw, 300px); 
-
+  min-width: clamp(200px, 50vw, 300px);
   background-color: rgba(240, 248, 255, 0.129);
   border-radius: 10px;
   padding: 15px;
@@ -130,38 +154,39 @@
   border: 4px solid transparent;
   position: relative;
   z-index: 1;
+  margin-bottom: 20px; /* Agrega el margen inferior */
 }
-
-
-
-
 @media (max-width: 920px) {
-  .text-container{
+  .text-container {
     margin-left: 30px;
-    
   }
   .description-container {
-   margin-left: -50px !important; 
+    margin-left: -50px !important;
+  }
+
+  .dot-image {
+    width: 40px;
+    height: 40px;
+    top: -25px; /* Ajusta según necesites */
+
   }
 }
 
 @media (max-width: 856px) {
   .description-container {
-   margin-left: -80px !important;
+    margin-left: -80px !important;
   }
 }
-
 
 @media (max-width: 823px) {
   .description-container {
-   margin-left: -110px !important; 
+    margin-left: -110px !important;
   }
 }
 
-
 @media (max-width: 768px) {
   .hero-container {
-    padding: 1rem; 
+    padding: 1rem;
   }
 
   .text-container {
@@ -169,31 +194,38 @@
   }
 
   .description-container {
-    flex-direction: row; 
-    gap: 15px; 
+    flex-direction: row;
+    gap: 15px;
     padding: 15px;
     margin-left: -25px !important;
     margin-top: 50px;
   }
 
   .description-container img {
-    width: clamp(80px, 15vw, 120px); 
-    left: clamp(5px, 2vw, 20px); 
+    width: clamp(80px, 15vw, 120px);
+    left: clamp(5px, 2vw, 20px);
     top: clamp(60px, 2vh, 30px);
     filter: none;
   }
 
   .description-containerText {
-    padding: 10px; 
+    padding: 10px;
     margin-left: -30px;
   }
 }
 
-
 @media (max-width: 598px) {
-  .solanaButton {
-    display: none;
+
+  .dot-image {
+display: none;
+
   }
+
+  .line-1 {
+    margin-bottom: 5px;
+  }
+
+
 
   .text-container {
     width: 100%;
@@ -206,15 +238,20 @@
 
   .line-2 {
     flex-direction: column;
-    align-items: center; /* Centra verticalmente los elementos hijos */
-    justify-content: center; /* Centra horizontalmente en columna */
+    align-items: center;
+    justify-content: center;
     gap: 5px;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    margin: 0 auto; /* Centra el bloque completo */
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 480px) {
+  .description-containerText button{
+    top: 10px;
+    right: 20px;  
+  }
+
   .hero-container {
     padding: 1rem;
   }
@@ -233,26 +270,24 @@
     margin-left: 0 !important;
   }
 
-  .solanaButton {
-    display: none;
-  }
+ 
 
   .line-2 {
     flex-direction: column;
-    align-items: center; /* Centra verticalmente los elementos hijos */
-    justify-content: center; /* Centra horizontalmente en columna */
+    align-items: center;
+    justify-content: center;
     gap: 5px;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    margin: 0 auto; /* Centra el bloque completo */
+    width: 100%;
+    margin: 0 auto;
   }
 
   .line-2 span {
     white-space: nowrap;
-    text-align: center; /* Refuerza el centrado del texto */
+    text-align: center;
   }
 
   .line-3 {
-    margin-left: 0; /* Centrado completo */
+    margin-left: 0;
   }
 
   .description-container {
@@ -260,7 +295,6 @@
     align-items: flex-start;
     gap: 20px;
     margin: 30px auto !important;
-
   }
 
   .description-container img {
@@ -270,7 +304,6 @@
     filter: none;
     background-color: rgba(102, 51, 153, 0.245);
     border: 2px solid blueviolet;
- 
     padding: 5px;
   }
 
@@ -281,22 +314,120 @@
   }
 }
 
+@media (max-width: 425px) {
 
-@media(max-width:387px){
+  .description-containerText button{
+    top: 100px;
+    right: 235px;
+    width: 300px
+  }
+
+  .description-containerText {
+    margin-bottom: 100px !important; 
+  }
+}
+
+@media (max-width: 387px) {
+
   .hero-text {
     font-size: clamp(1.7rem, 4vw, 3rem);
     margin-left: 0 !important;
   }
+
+
+
 }
 
+@media (max-width: 366px) {
 
-@media(max-width:366px){
+  .description-containerText button{
+    top: 100px;
+    right: 175px;
+    width: 200px
+  }
+
+
   .hero-text {
     font-size: clamp(1.55rem, 4vw, 3rem);
     margin-left: 0 !important;
+  }
+}
 
+@media (max-width: 325px) {
+
+  .description-containerText button{
+    top: 100px;
+    right: 160px;
+    height: 70px;
+    width: 200px
   }
 
+
+ 
+}
+
+@media (max-width:1366px){
+  .mindCapImg{
+
+    left: 120%;
+  }
+  
 }
 
 
+@media (max-width:1282px){
+  .mindCapImg{
+
+    left: 110%;
+  }
+  
+}
+
+@media (max-width:1200px){
+  .mindCapImg img{
+    width: 150px !important;
+    height: 150px;
+    left: 110%;
+  }
+  
+}
+
+@media (max-width:1119px){
+  .mindCapImg{
+
+    left: 100%;
+  }
+  
+}
+
+@media (max-width:1047px){
+  .mindCapImg{
+
+    left: 90%;
+    
+  }
+  
+}
+
+@media (max-width:883px){
+  .mindCapImg{
+
+    left: 80%;
+    
+  }
+  
+}
+
+@media (max-width:596px){
+  .mindCapImg img{
+    height: 100px;
+    width: 100px !important;
+    
+  }
+  .mindCapImg {
+    left: 85%;
+    z-index: 222222;
+    top: 80px;
+  }
+  
+}

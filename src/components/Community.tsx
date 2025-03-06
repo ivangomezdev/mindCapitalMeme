@@ -14,7 +14,7 @@ const Community = () => {
           </div>
           <div className="community__tagline">
             <h1 className="community__title">
-              NO HAY MONEDAS MALAS, SOLO ENTRADAS MAL HECHAS.
+              NO HAY MONEDAS MALAS, SOLO CREADORES CRIMINALES.
             </h1>
           </div>
           <div className="community__cta">

@@ -38,6 +38,9 @@ export default function Roadmap() {
 
   return (
     <div className="roadmap-container" ref={roadmapRef}>
+  
+        <img src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741116728/Dise%C3%B1o_sin_t%C3%ADtulo_1_l770ou.gif" className="candle" />
+   
       <h1 className="roadmap-title">ROADMAP</h1>
 
       <div className="phase-container">
@@ -78,7 +81,9 @@ export default function Roadmap() {
             <li>Campaña La Venganza es Descentralizada: Potenciar el marketing con influencers y medios para exponer el caso y atraer más apoyo.</li>
           </ul>
         </div>
-        
+      
+       
+       
       </div>
     </div>
   )

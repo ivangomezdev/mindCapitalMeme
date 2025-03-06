@@ -16,7 +16,6 @@ export default function MindCoin() {
             height={400}
           />
 
-          {/* Right side with text */}
           <div className="hero-content">
             <h1 className="title">TOKEN</h1>
             <div className="description">

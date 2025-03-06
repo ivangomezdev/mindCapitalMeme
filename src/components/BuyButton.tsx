@@ -13,7 +13,7 @@ export default function SolanaButton() {
   ];
 
   return (
-    <div className="container">
+    <div className="button__container">
       <button
         className="button"
         onMouseEnter={() => setShowCoins(true)}

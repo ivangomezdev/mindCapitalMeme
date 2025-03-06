@@ -1,13 +1,15 @@
-.container {
-  position: relative;
-  display: flex;
-  top: 0px;
+.button__container {
+  position: absolute;
+  
+  top: 80%;
+  left: 80%;
   align-items: center;
   z-index: 10;
 }
 
 .button {
-  padding: 12px 24px;
+  padding: 7px 24px;
+  border-color: blueviolet !important;
   background: rgb(249, 249, 249);
   background: linear-gradient(
     94deg,
@@ -15,11 +17,11 @@
     rgba(6, 121, 162, 1) 0%,
     rgba(6, 121, 162, 1) 10%,
     rgba(0, 165, 173, 1) 60%,
-    rgba(255, 255, 255, 0) 100%
+    rgb(255, 255, 255) 100%
   );
   color: whitesmoke;
   font-weight: bold;
-  border: none;
+  border: solid 3px gray;
   border-radius: 50px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
