@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./community.css";
 
 const Community = () => {
@@ -6,10 +7,12 @@ const Community = () => {
       <div className="community__container">
         <div className="community__header">
           <div className="community__logo-container">
-            <img
+            <Image
               src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740768075/49378cc9-abb8-4efa-95cb-528ae1bb41ea-removebg-preview_ml5zx2.png"
-              alt="Grumpy Cat Logo"
+              alt="Logo"
               className="community__logo"
+              height={80}
+              width={80}
             />
           </div>
           <div className="community__tagline">

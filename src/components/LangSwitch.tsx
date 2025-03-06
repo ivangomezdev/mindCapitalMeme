@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import "./langSwitch.css"
 const LangSwitch = () => {
- const [lang,useSetLang] = useState(true)
+ const [Lang,UseSetLang] = useState(true)
 
  const changeLang = () =>{
-    useSetLang(!lang)
+  UseSetLang(!Lang)
  }
   return (
 <label className="switch">
