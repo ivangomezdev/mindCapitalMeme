@@ -9,7 +9,7 @@ const LangSwitch = () => {
  }
   return (
 <label className="switch">
-  <input checked={lang} type="checkbox" onClick={changeLang} className="toggle" />
+  <input checked={Lang} type="checkbox" onClick={changeLang} className="toggle" />
   <span className="slider"></span>
   <span className="card-side"></span>
 </label>
