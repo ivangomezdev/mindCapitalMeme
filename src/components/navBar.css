@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.267);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   width: 450px;
   padding: 5px;
   height: 70px;
@@ -11,8 +11,8 @@
   text-align: center;
   margin: 15px auto;
   justify-content: center;
-  gap: 30px;
-  position: relative; 
+
+  position: relative;
 }
 
 .navBar__content p {
@@ -43,34 +43,31 @@
   left: 90vh;
 }
 
-
-
-@media (max-width:970px){
-  
-.navBar__lang {
-  border-radius: 30px;
-  height: 30px;
-  position: absolute;
-  left: 70vh;
-}
+@media (max-width: 970px) {
+  .navBar__lang {
+    border-radius: 30px;
+    height: 30px;
+    position: absolute;
+    left: 70vh;
+  }
 }
 @media (max-width: 685px) {
   .navBar__lang {
-    left: 90%; 
+    left: 90%;
   }
 }
 
 @media (max-width: 600px) {
   .navBar__lang {
-    left: auto; 
+    left: auto;
     right: 5px;
-    top: 5px; 
+    top: 5px;
   }
 }
 
 @media (max-width: 485px) {
   .navBar__content {
-   width: 360px;
+    width: 360px;
   }
 
   .navBar__content p {
@@ -83,4 +80,18 @@
   .navBar__content p {
     display: none;
   }
+}
+
+.navBar__navigatorCont {
+  text-decoration: none;
+  padding: 6px; /* Agrega el padding aquí en lugar del hover */
+  width: 100px;
+  border-radius: 5px;
+  transition: background-color 1s ease;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.navBar__navigatorCont:hover {
+  background-color: rgba(0, 0, 0, 0.411);
+  
 }

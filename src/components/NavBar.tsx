@@ -8,34 +8,34 @@ import LangSwitch from "./LangSwitch";
 export default function Navbar() {
   return (
     <nav className="navBar__content">
-      <div>
+      <a href="#home" className="navBar__navigatorCont">
         <HomeRoundedIcon />
         <p>Home</p>
-      </div>
+      </a>
 
-      <div>
+      <a href="#whyBuy" className="navBar__navigatorCont">
         <InfoRoundedIcon />
         <p>Info</p>
-      </div>
+      </a>
 
-      <div>
+      <a href="#roadmap" className="navBar__navigatorCont">
         <MapRoundedIcon />
         <p>RoadMap</p>
-      </div>
+      </a>
 
-      <div>
+      <a href="#token" className="navBar__navigatorCont">
         <RequestQuoteRoundedIcon />
         <p>Token</p>
-      </div>
+      </a>
 
-      <div>
+      <a href="#community" className="navBar__navigatorCont">
         <PeopleRoundedIcon />
         <p>Comunidad</p>
-      </div>
+      </a>
 
-      <div className="navBar__lang">
+      <a className="navBar__lang">
         <LangSwitch/>
-      </div>
+      </a>
     </nav>
   );
 }

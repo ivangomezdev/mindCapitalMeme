@@ -11,7 +11,7 @@ import Community from "@/components/Community";
 export default function Home() {
   return (
     <div>
-      <section id="about" className="home__main">
+      <section id="home" className="home__main">
    
         <Navbar />
         <Main />
@@ -50,11 +50,11 @@ export default function Home() {
         <Roadmap />
       </section>
 
-      <section id="disclaimer">
+      <section id="token">
         <MindCoin />
       </section>
 
-      <section id="token">
+      <section id="community">
         <Community />
       </section>
     </div>
