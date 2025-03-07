@@ -70,8 +70,7 @@
 
 @media (max-width: 485px) {
   .navBar__content {
-    max-width: 90%;
-    padding: 10px !important;
+   width: 470px;
   }
 
   .navBar__content p {
