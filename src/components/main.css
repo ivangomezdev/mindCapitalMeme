@@ -334,6 +334,14 @@ display: none;
     margin-left: 0 !important;
   }
 
+  .description-containerText button{
+    height: 40px;
+    border:none;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+
+  }
 
 
 }
@@ -357,9 +365,8 @@ display: none;
 
   .description-containerText button{
     top: 100px;
-    right: 160px;
-    height: 70px;
-    width: 200px
+    right: 170px;
+
   }
 
 

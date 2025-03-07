@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./community.css";
 
 const Community = () => {
+  const lang = "esS"
   return (
     <div className="community">
       <div className="community__container">
@@ -27,7 +28,7 @@ const Community = () => {
 
         <div className="community__content">
           <div className="community__disclaimer">
-            <h2 className="community__disclaimer-title">INFORMACIÓN</h2>
+            <h2 className="community__disclaimer-title">{lang == "es" ? "INFORMACIÓN" : "INFORMATION"}</h2>
             <p className="community__disclaimer-text">
               MindCapital vendió la promesa de ganancias fáciles, pero terminó
               siendo un esquema Ponzi que dejó a miles de personas sin su
@@ -61,12 +62,7 @@ const Community = () => {
               />
               <span className="community__mascot-name">$MCapital</span>
             </div>
-            <div className="community__navigation">
-              <button className="community__nav-button">Home</button>
-              <button className="community__nav-button">Acerca de</button>
-              <button className="community__nav-button">Roadmap</button>
-              <button className="community__nav-button">Contrato</button>
-            </div>
+   
           </div>
         </div>
       </div>

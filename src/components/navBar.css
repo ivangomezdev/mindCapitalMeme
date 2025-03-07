@@ -3,7 +3,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.267);
   font-size: 1.2rem;
-  width: 450px;
+  max-width: 450px;
   padding: 5px;
   height: 70px;
   border-radius: 5px;
@@ -11,7 +11,7 @@
   text-align: center;
   margin: 15px auto;
   justify-content: center;
-
+  gap: 30px;
   position: relative;
 }
 
@@ -80,7 +80,16 @@
   .navBar__content p {
     display: none;
   }
+
+  .navBar__content{
+    width: 98%;
+  }
 }
+
+@media(min-width:400px){
+  .navBar__content {
+ gap: 0px;
+  }
 
 .navBar__navigatorCont {
   text-decoration: none;
@@ -94,4 +103,5 @@
 .navBar__navigatorCont:hover {
   background-color: rgba(0, 0, 0, 0.411);
   
+}
 }

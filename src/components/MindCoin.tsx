@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 import "./MindCoin.css";
+
 export default function MindCoin() {
+
+  
   return (
     <main className="main-container">
       <div className="container">
@@ -31,10 +32,7 @@ export default function MindCoin() {
 
             <div className="cta-buttons">
               <button className="primary-button">COMPRA $MCapital</button>
-              <Link href="#" className="secondary-button">
-                Descubre Más
-                <ExternalLink size={18} />
-              </Link>
+            
             </div>
           </div>
         </div>
