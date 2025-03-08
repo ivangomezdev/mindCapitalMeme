@@ -54,7 +54,9 @@ const Community = () => {
                 </button>
               </div>
               <div className="community__mascot">
-                <img
+                <Image
+                width={40}
+                height={40}
                   src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740768075/49378cc9-abb8-4efa-95cb-528ae1bb41ea-removebg-preview_ml5zx2.png"
                   alt="Grumpy Mascot"
                   className="community__mascot-image"
