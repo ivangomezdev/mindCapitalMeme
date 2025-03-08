@@ -4,7 +4,7 @@ import "./langSwitch.css";
 import { useTranslation } from "react-i18next";
 const LangSwitch = () => {
   const [Lang, setLang] = useState(true); 
-  const { t, i18n } = useTranslation("community");
+  const { i18n } = useTranslation("community");
 
   // Función para manejar el cambio de idioma
   const handleLanguageSwitch = () => {

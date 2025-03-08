@@ -7,37 +7,39 @@ import I18nProvider from "./I18nProvider";
 export default function Roadmap() {
   const roadmapRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation("roadMap");
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const phases = entry.target.querySelectorAll(".phase-container");
-            phases.forEach((phase, index) => {
-              phase.classList.add("animate-in");
-              // Añadimos delay diferente a cada fase
-              (phase as HTMLElement).style.animationDelay = `${index * 0.5}s`;
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1, // Se dispara cuando el 10% del elemento es visible
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const phases = entry.target.querySelectorAll(".phase-container");
+              phases.forEach((phase, index) => {
+                phase.classList.add("animate-in");
+                (phase as HTMLElement).style.animationDelay = `${index * 0.5}s`;
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+    
+      const currentRoadmapRef = roadmapRef.current; // Guardamos la referencia
+    
+      if (currentRoadmapRef) {
+        observer.observe(currentRoadmapRef);
       }
-    );
-
-    if (roadmapRef.current) {
-      observer.observe(roadmapRef.current);
-    }
-
-    return () => {
-      if (roadmapRef.current) {
-        observer.unobserve(roadmapRef.current);
-      }
-    };
-  }, []);
-
+    
+      return () => {
+        if (currentRoadmapRef) {
+          observer.unobserve(currentRoadmapRef);
+        }
+      };
+    }, []);
+    
   return (
     <I18nProvider>
       <div className="roadmap-container" ref={roadmapRef}>
