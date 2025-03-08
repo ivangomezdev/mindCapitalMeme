@@ -44,8 +44,8 @@ const Main = () => {
     <div className="hero-container" ref={heroRef}>
       <div className="text-container">
         <h1 className="hero-text">
-          <div className="text-line line-1">{t("mainLine1")}</div>
-          <div className="text-line line-2">
+          <div className="text-line text-lineEl line-1">{t("mainLine1")}</div>
+          <div className="text-line text-lineEl line-2">
             <span>{t("mainLine2")}</span>
             <div className="mindCapImg">
               <Image
@@ -56,7 +56,7 @@ const Main = () => {
               />
             </div>
           </div>
-          <div className="text-line line-3">
+          <div className="text-line text-lineEl line-3">
             MINDCAP
             <span className="letter-i-container">
               <span className="letter-i">I</span>
@@ -71,7 +71,7 @@ const Main = () => {
             TAL
           </div>
         </h1>
-        <div className="description-container">
+        <div className="text-line line-4 description-container">
           <Image
             src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1740774488/7a4eb05d-7a2f-4810-a1df-de62cc403cc3-removebg-preview_1_q7velz.png"
             alt=""

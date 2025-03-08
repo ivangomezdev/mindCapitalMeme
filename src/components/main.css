@@ -35,6 +35,10 @@
 .line-3.is-visible {
   animation-delay: 1.6s;
 }
+
+.line-4.is-visible{
+animation-delay: 2.3s;
+}
 /* FIN ANIMACIONES */
 
 .hero-container {
@@ -65,7 +69,7 @@
   line-height: 1.2;
 }
 
-.text-line {
+.text-lineEl {
   display: block;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   margin: 0;
