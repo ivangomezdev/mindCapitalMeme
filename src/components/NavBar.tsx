@@ -6,6 +6,7 @@ import RequestQuoteRoundedIcon from "@mui/icons-material/RequestQuoteRounded";
 import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
 import LangSwitch from "./LangSwitch";
 export default function Navbar() {
+  
   return (
     <nav className="navBar__content">
       <a href="#home" className="navBar__navigatorCont">

@@ -1,10 +1,15 @@
+"use client"
 import React from "react";
 import "./whyBuy.css"
 import Image from "next/image";
+import I18nProvider from "./I18nProvider";
+import { useTranslation } from "react-i18next";
 const WhyBuy = () => {
+  const {t} = useTranslation("whyBuy")
   return (
+    <I18nProvider>
     <div  className="whyBuy__content">
-      <h1 className="whyBuy__title">POR QUÉ INVERTIR</h1>
+      <h1 className="whyBuy__title">{t("whyTitle")}</h1>
       <div className="whyBuy__textContent">
         <Image
         width={400}
@@ -12,32 +17,27 @@ const WhyBuy = () => {
          src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741025326/coin-removebg-preview_oirzku.png" alt="" />
         <ul>
           <li>
-            <strong>Justicia descentralizada:</strong> Contribuye a financiar
-            una demanda contra MindCapital.
+            <strong>{t("whyTitleItem1")}</strong> {t("whyItem1")}
           </li>
           <li>
-            <strong>Comunidad fuerte:</strong> Somos un grupo unido con un
-            objetivo común.
+            <strong>{t("whyTitleItem2")}</strong>  {t("whyItem2")}
           </li>
           <li>
-            <strong>Reinversión estratégica:</strong> El 30% de las ganancias se
-            usa para hacer crecer el proyecto.
+            <strong>{t("whyTitleItem3")}</strong>  {t("whyItem3")}
           </li>
           <li>
-            <strong>Transparencia total:</strong> Fondos gestionados de manera
-            pública y verificable.
+            <strong>{t("whyTitleItem4")}</strong>  {t("whyItem4")}
           </li>
           <li>
-            <strong>Potencial de crecimiento:</strong> Cuanto más grande la
-            comunidad, mayor el impacto.
+            <strong>{t("whyTitleItem5")}</strong>  {t("whyItem5")}
           </li>
           <li>
-            <strong>Memecoin con propósito:</strong> No es solo un meme, es una
-            causa.
+            <strong>{t("whyTitleItem6")}</strong>  {t("whyItem6")}
           </li>
         </ul>
       </div>
     </div>
+    </I18nProvider>
   );
 };
 

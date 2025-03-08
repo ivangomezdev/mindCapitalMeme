@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react";
-
 import "./buyButton.css";
 
 export default function SolanaButton() {

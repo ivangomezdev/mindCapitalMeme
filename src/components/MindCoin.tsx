@@ -1,10 +1,13 @@
+"use client"
 import Image from "next/image";
 import "./MindCoin.css";
-
+import { useTranslation } from "react-i18next";
+import I18nProvider from "./I18nProvider"; 
 export default function MindCoin() {
-
+  const { t } = useTranslation("token");
   
   return (
+    <I18nProvider>
     <main className="main-container">
       <div className="container">
         <div className="hero-section">
@@ -20,18 +23,11 @@ export default function MindCoin() {
           <div className="hero-content">
             <h1 className="title">TOKEN</h1>
             <div className="description">
-              <p>
-               $MCapital no es solo otro token, esta construido sobre ERC20.
-              </p>
-              <p>Uno de los protocolos más rápidos en crecimiento que existen</p>
-              <p>
-                Olvida el Hype, Subete a la ola. Estamos presentes en
-              </p>
-              <p>Twitter y telegram, no olvides seguirnos!</p>
+              <p>{t("tokenAbout")}</p>
             </div>
 
             <div className="cta-buttons">
-              <button className="primary-button">COMPRA $MCapital</button>
+              <button className="primary-button">{t("tokenButtonText")}</button>
             
             </div>
           </div>
@@ -75,5 +71,6 @@ export default function MindCoin() {
         </div>
       </div>
     </main>
+    </I18nProvider>
   );
 }

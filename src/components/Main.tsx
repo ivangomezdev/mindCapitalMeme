@@ -2,12 +2,13 @@
 import Image from "next/image";
 import SolanaButton from "./BuyButton";
 import { useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 import "./main.css";
+import I18nProvider from "./I18nProvider";
 
 const Main = () => {
   const heroRef = useRef(null);
-
+  const {t} = useTranslation("main")
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,12 +38,13 @@ const Main = () => {
   }, []);
 
   return (
+        <I18nProvider>
     <div className="hero-container" ref={heroRef}>
       <div className="text-container">
         <h1 className="hero-text">
-          <div className="text-line line-1">LA MEMECOIN</div>
+          <div className="text-line line-1">{t("mainLine1")}</div>
           <div className="text-line line-2">
-            <span>DE LA COMUNIDAD</span>
+            <span>{t("mainLine2")}</span>
             <div className="mindCapImg">
               <Image
                 src="https://res.cloudinary.com/dc5zbh38m/image/upload/v1741282808/MCP-removebg-preview_fjyst9.png"
@@ -76,14 +78,12 @@ const Main = () => {
           />
           <div className="description-containerText">
             <p>
-              Somos la comunidad afectada por el esquema Ponzi de MindCapital.
-              Creamos esta memecoin para recuperar lo que nos prometieron.
+             {t("mainAboutP1")}
               <span style={{ fontWeight: "bold", color: "#00A5AD" }}>
                 {" "}
-                El 70% de las ganancias irá a financiar una demanda contra ellos{" "}
+               {t("mainAboutP2")}{" "}
               </span>
-              , y el 30% se reinvertirá en la publicidad del proyecto. ¡La
-              venganza es descentralizada! 🚀
+              {t("mainAboutP3")}
             </p>
             <SolanaButton />
           </div>
@@ -92,6 +92,7 @@ const Main = () => {
       </div>
       
     </div>
+    </I18nProvider>
   );
 };
 
