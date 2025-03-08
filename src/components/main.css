@@ -17,7 +17,9 @@
 .mindCapImg{
   position: absolute;
   left: 130%;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5))
 }
+
 
 /* Solo aplica la animación cuando tiene la clase is-visible */
 .text-line.is-visible {
@@ -119,6 +121,8 @@ animation-delay: 2.3s;
   transform: translateX(-50%); /* Centra el punto */
   z-index: 2; /* Punto encima de la "I" */
   pointer-events: none; /* Evita interferencias */
+  animation: solar-eclipse 3s infinite ease-in-out;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5))
 }
 
 .description-container {
@@ -254,6 +258,7 @@ display: none;
   .description-containerText button{
     top: 10px;
     right: 20px;  
+    animation: button-eclipse 3s infinite ease-in-out;
   }
 
   .hero-container {

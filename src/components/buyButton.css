@@ -1,3 +1,27 @@
+@keyframes button-eclipse {
+  0% {
+    filter: drop-shadow(0px 0px 5px darkblue);
+
+  }
+  25% {
+    filter: drop-shadow(2px 5px 10px darkorchid);
+
+  }
+  50% {
+    filter: drop-shadow(5px 10px 20px darkblue);
+
+  }
+  75% {
+    filter: drop-shadow(2px 5px 10px rgb(0, 0, 180));
+ 
+  }
+  100% {
+    filter: drop-shadow(0px 0px 5px darkorchid);
+
+  }
+}
+
+
 .button__container {
   position: absolute;
   
@@ -27,6 +51,7 @@
   cursor: pointer;
   position: relative;
   transition: transform 0.2s ease-in-out;
+
 }
 
 .button:hover {
@@ -39,3 +64,4 @@
   height: 24px;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
